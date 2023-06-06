@@ -35,9 +35,6 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>特别感谢：Chat-GPT</strong></div> 
-      <div className={styles.copyright}>         Listern1</strong></div>
-      <div className={styles.copyright}>         Vercel＆GitHub</strong></div>
       <div className={styles.copyright}>© 2023 {config.author}</div>
 
       <div className={styles.settings}>
