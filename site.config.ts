@@ -47,17 +47,17 @@ export default siteConfig({
   pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
-   important pages
-  navigationStyle: 'default'
+  //important pages
+   navigationStyle: 'default'
   // navigationStyle: 'custom',
-  navigationLinks: [
-     {
-       title: 'About',
-       pageId: '7a01c8bec59c4611b08b7e9cf7be157c?pvs=4'
-     },
+  // navigationLinks: [
+  //  {
+  //     title: 'About',
+  //     pageId: '7a01c8bec59c4611b08b7e9cf7be157c?pvs=4'
+  //   },
   //  {
   //     title: 'Contact',
   //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
   //   }
-   ]
+  // ]
 })
