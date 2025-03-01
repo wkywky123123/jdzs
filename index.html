@@ -60,10 +60,15 @@
             background-color: #4169E1;
         }
         
-        /* 响应式调整：小屏幕（小于768px）时变成单栏 */
+        /* 响应式调整：小屏幕（小于768px）时变成单栏并居中 */
         @media (max-width: 768px) {
+            .audio-container {
+                justify-content: center; /* 让内容居中 */
+            }
             .audio-column {
-                flex-basis: 100%;
+                flex-basis: 90%; /* 让单栏占据90%的宽度，留出边距 */
+                max-width: 600px; /* 限制最大宽度，避免过宽 */
+                margin: 0 auto; /* 让内容水平居中 */
             }
         }
     </style>
@@ -82,30 +87,6 @@
                         您的浏览器不支持音频元素。
                     </audio>
                 </div>
-                <div class="audio-item">
-                    <h4>平凡的一天</h4>
-                    <div class="audio-wrapper">
-                        <audio controls>
-                            <source src="songs/平凡的一天.m4a" type="audio/mpeg">
-                            您的浏览器不支持音频元素。
-                        </audio>
-                    </div>
-                <div class="audio-item">
-                    <h4>像我这样的人</h4>
-                    <div class="audio-wrapper">
-                        <audio controls>
-                            <source src="songs/像我这样的人.m4a" type="audio/mpeg">
-                            您的浏览器不支持音频元素。
-                        </audio>
-                </div>
-                <div class="audio-item">
-                    <h4>借</h4>
-                    <div class="audio-wrapper">
-                        <audio controls>
-                            <source src="songs/借.m4a" type="audio/mpeg">
-                            您的浏览器不支持音频元素。
-                        </audio>
-                </div>
             </div>
         </div>
         
@@ -122,10 +103,6 @@
             </div>
         </div>
     </div>
-    
-</body>
-</html>
-
     
 </body>
 </html>
