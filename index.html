@@ -8,6 +8,7 @@
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
+            font-size: 16px;
         }
         h1 {
             text-align: center;
@@ -58,6 +59,8 @@
         .download-btn:hover {
             background-color: #4169E1;
         }
+        
+        /* 响应式调整：小屏幕（小于768px）时变成单栏 */
         @media (max-width: 768px) {
             .audio-column {
                 flex-basis: 100%;
@@ -78,15 +81,7 @@
                         <source src="songs/一程山路.mp3" type="audio/mpeg">
                         您的浏览器不支持音频元素。
                     </audio>
-                </div>
-            </div>
-            <div class="audio-item">
-                <h4>一程山路</h4>
-                <div class="audio-wrapper">
-                    <audio controls>
-                        <source src="path/to/your/audio/file2.mp3" type="audio/mpeg">
-                        您的浏览器不支持音频元素。
-                    </audio>
+                    <a href="songs/一程山路.mp3" download class="download-btn">下载</a>
                 </div>
             </div>
         </div>
@@ -94,27 +89,21 @@
         <div class="audio-column">
             <h2 class="column-title">周深</h2>
             <div class="audio-item">
+                <h4>起风了</h4>
                 <div class="audio-wrapper">
                     <audio controls>
-                        <source src="path/to/your/audio/file3.mp3" type="audio/mpeg">
+                        <source src="songs/起风了.mp3" type="audio/mpeg">
                         您的浏览器不支持音频元素。
                     </audio>
-                    <a href="path/to/your/audio/file3.mp3" download class="download-btn">下载</a>
+                    <a href="songs/起风了.mp3" download class="download-btn">下载</a>
                 </div>
-                <p>音频文件 3</p>
-            </div>
-            <div class="audio-item">
-                <div class="audio-wrapper">
-                    <audio controls>
-                        <source src="path/to/your/audio/file4.mp3" type="audio/mpeg">
-                        您的浏览器不支持音频元素。
-                    </audio>
-                    <a href="path/to/your/audio/file4.mp3" download class="download-btn">下载</a>
-                </div>
-                <p>音频文件 4</p>
             </div>
         </div>
     </div>
+    
+</body>
+</html>
+
     
 </body>
 </html>
