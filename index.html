@@ -14,16 +14,18 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        
+        /* 使用 CSS Grid 以实现自动单双栏切换 */
         .audio-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 默认双栏 */
             gap: 20px;
         }
+        
         .audio-column {
-            flex-basis: calc(50% - 10px);
             min-width: 250px;
         }
+        
         .column-title {
             text-align: center;
             font-size: 1.5em;
@@ -32,20 +34,24 @@
             border-bottom: 2px solid #1E90FF;
             padding-bottom: 10px;
         }
+        
         .audio-item {
             margin-bottom: 20px;
             text-align: center;
         }
+        
         .audio-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
         }
+        
         audio {
             flex-grow: 1;
             margin-right: 10px;
         }
+        
         .download-btn {
             display: inline-block;
             padding: 8px 15px;
@@ -56,6 +62,7 @@
             transition: background-color 0.3s;
             font-size: 14px;
         }
+        
         .download-btn:hover {
             background-color: #4169E1;
         }
@@ -63,12 +70,12 @@
         /* 响应式调整：小屏幕（小于768px）时变成单栏并居中 */
         @media (max-width: 768px) {
             .audio-container {
+                grid-template-columns: 1fr; /* 变为单栏 */
                 justify-content: center; /* 让内容居中 */
             }
             .audio-column {
-                flex-basis: 90%; /* 让单栏占据90%的宽度，留出边距 */
-                max-width: 600px; /* 限制最大宽度，避免过宽 */
-                margin: 0 auto; /* 让内容水平居中 */
+                max-width: 600px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -86,6 +93,7 @@
                         <source src="songs/一程山路.mp3" type="audio/mpeg">
                         您的浏览器不支持音频元素。
                     </audio>
+                    <a href="songs/一程山路.mp3" download class="download-btn">下载</a>
                 </div>
             </div>
         </div>
@@ -99,6 +107,7 @@
                         <source src="songs/起风了.mp3" type="audio/mpeg">
                         您的浏览器不支持音频元素。
                     </audio>
+                    <a href="songs/起风了.mp3" download class="download-btn">下载</a>
                 </div>
             </div>
         </div>
